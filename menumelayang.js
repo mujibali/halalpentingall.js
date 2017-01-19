@@ -58,3 +58,20 @@ $("#cssmenu").menumaker({
 });
 })(jQuery);
 //]]>
+//<![CDATA[
+$(document).ready(function() {
+    var stickyNavTop = $('#cssmenu').offset().top; 
+    var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();  
+        if (scrollTop > stickyNavTop) { 
+            $('#cssmenu').css({ 'position': 'fixed', 'top':0, 'z-index':9999 });
+        } else {
+            $('#cssmenu').css({ 'position': 'relative' });
+        }
+    };
+    stickyNav();
+    $(window).scroll(function() {
+        stickyNav();
+    });
+});
+//]]>
