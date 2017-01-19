@@ -188,18 +188,3 @@
         location.href = pAddress
     }
   /*]]>*/
-//<![CDATA[
-function resizeThumb(parentID, size) {
-    var parent = document.getElementById(parentID),
-        image = parent.getElementsByTagName('img');
-    for (var i = 0; i < image.length; i++) {
-        image[i].src = image[i].src.replace(//s72-c/, "/s" + size + "-c");
-        image[i].width = size;
-        image[i].height = size;
-    }
-}
-resizeThumb('PopularPosts1', 300);
-//]]>
-jQuery(document).ready(function(){
-jQuery(&quot;#comments p&quot;).find(&quot;a&quot;).replaceWith(&quot;<mark>Spam Detected!</mark> Link aktif otomatis terhapus!!!&quot;);
-});
